@@ -14,7 +14,7 @@ async function sendTelegram(message) {
 }
 
 (async () => {
-  let found = false;
+  await sendTelegram('✅ البوت اشتغل على السيرفر');  let found = false;
 
   while (true) {
     let browser;
