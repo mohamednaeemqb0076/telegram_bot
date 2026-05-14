@@ -1,8 +1,7 @@
 const { chromium } = require('playwright');
 
-const TOKEN = '8924497505:AAGjsbvOYRNwxqrHenwmb7sfhOvCbULO3Dg';
-const CHAT_ID = '1010381691';
-
+const TOKEN = process.env.BOT_TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 async function sendTelegram(message) {
   try {
     const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
